@@ -21,32 +21,32 @@ komutunu çalıştırdıktan sonra modül kurulmuş olur. Geri kalanı için mod
 PyCharm'ı https://www.jetbrains.com/pycharm/ linkinden indirebilirsiniz.
    Request modülünü projenizde çalıştırabilmeniz için;
 ```
-    import requests
+  import requests
     
 ```
-Kütüphanesini eklemeniz gerekiyor.
-Requests get ve post metodları için verileri alacağımız ve göndereceğimiz url'ler gerekli.
+Yazarak requests kütüphanesini eklemeniz gerekiyor.
+Requests get ve post metodlarını kullanmak için verileri alacağımız ve göndereceğimiz url'leri kullanırız.
 
 ``` 
 
 r = requests.get('https://example.com')
 
 ```
-Böylece web sitesinden ihtiyacımız olan bilgileri artık ``r`` nesnesinden alabiliriz.
-Post metodu için de aynı şekilde bir nesne oluşturup veri gönderimi yapabiliriz. Göndereceğimiz veriyi veriyi sözlük şeklinde
-belirtip aşağıdaki gibi post isteği oluşturabiliriz.
+Şeklinde web sitesinden ihtiyacımız olan bilgileri artık ``r`` nesnesinden alabiliriz.
+Post metodu için de aynı şekilde bir nesne oluşturup veri gönderimi yapabiliriz. Göndereceğimiz veriyi sözlük şeklinde
+belirtip aşağıdaki gibi bir post isteği oluşturabiliriz.
 
 ```
 
 r = requests.post('http://example.org', data = {'key':'value'})
 
 ```
-Eğer HTTP header eklemek isterseniz header parametresine sözlük olarak bildirmeniz gerekir.
+Eğer bu isteğe HTTP header eklemek isterseniz, eklemek istediğiniz header'ları header parametresine sözlük olarak bildirmeniz gerekir.
 ```
 headers = {
 
         'content-type': 'application/json',
-        'origin': 'http://XXX.net'
+        'origin': 'http://xxxxxx.net'
 
     }
 
